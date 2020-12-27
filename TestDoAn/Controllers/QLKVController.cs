@@ -62,7 +62,7 @@ namespace TestDoAn.Controllers
                 {
                     return HttpNotFound();
                 }
-                db.NhanViens.Remove(nv);
+                //db.NhanViens.Remove(nv);
                 //db.SaveChanges();
                 
             }
