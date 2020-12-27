@@ -27,7 +27,7 @@
         $('#search').click(function () {
             var id = $('#searchI').val();
             var url = '/QLCH/Search/' + id;
-            $.get(url, function (data) { $('#divsearch').html(data); });
+            $.get(url, function (data) { $('divsearch').html(data); });
         })
     })
 </script>
