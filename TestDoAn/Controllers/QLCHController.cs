@@ -148,7 +148,7 @@ private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
 
 
 	//QUAN LI HOA DON
-        private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
+       
         // GET: Qlch
         public ActionResult Index()
         {
@@ -171,8 +171,8 @@ private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
 					ds.Add(a);
 				}
 			ViewBag.thanhtien = tong;
-return RedirectToAction("Index");
-				//return View(ds);
+
+				return View(ds);
 
         }
 
