@@ -12,8 +12,11 @@ namespace TestDoAn.Controllers
     {
 
 private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
-        // GET: Qlch
-        
+		// GET: Qlch
+		public ActionResult Index()
+		{
+			return View();
+		}
 		public ActionResult IndexNL()
 		{
 
@@ -158,10 +161,7 @@ private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
 	//QUAN LI HOA DON
        
         // GET: Qlch
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
 		
 
         public ActionResult IndexHD()
