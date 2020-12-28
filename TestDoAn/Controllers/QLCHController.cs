@@ -35,8 +35,8 @@ namespace TestDoAn.Controllers
 					ds.Add(a);
 				}
 			ViewBag.thanhtien = tong;
-return RedirectToAction("Index");
-				//return View(ds);
+
+				return View(ds);
 
         }
 
