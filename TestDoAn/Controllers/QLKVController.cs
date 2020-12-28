@@ -34,9 +34,15 @@ namespace TestDoAn.Controllers
                 NhanVien a = db.NhanViens.Find(nv.manv);
                 if(a==null)
                 {
-                    db.NhanViens.Add(nv);
-                    db.SaveChanges();
-                    return RedirectToAction("IndexNhanVien");
+              
+			        if(nv.sdt.Length==9)
+                    {
+                        db.NhanViens.Add(nv);
+                        db.SaveChanges();
+                        return RedirectToAction("IndexNhanVien");
+                    }
+                    ModelState.AddModelError("sdt", "Nhap du 10 ky tu");
+                    return View("Create");
                 }
                 ModelState.AddModelError("manv", "Nhân Viên Tồn Tại");
                 return View("Create");
@@ -62,8 +68,11 @@ namespace TestDoAn.Controllers
                 {
                     return HttpNotFound();
                 }
-                //db.NhanViens.Remove(nv);
-                //db.SaveChanges();
+                
+
+                db.NhanViens.Remove(nv);
+                db.SaveChanges();
+
                 
             }
             return RedirectToAction("IndexNhanVien");
