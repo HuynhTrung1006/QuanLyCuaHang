@@ -44,7 +44,7 @@
          <form action="@Url.Action("chonMua",new {id=item.masp })" method="get">
              <div class="row">
                  <div class="col-md-3">
-                     <input type="text"   name="@item.masp" class="form-control" placeholder="Số Lượng"/>
+                     <input type="number" min="1" name="@item.masp" class="form-control" placeholder="Số Lượng"/>
                  </div>
                  <div class="col-md-3">
                      <input type="submit" value="Chọn mua" class="btn btn-primary" />
