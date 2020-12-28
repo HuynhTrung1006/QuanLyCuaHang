@@ -49,9 +49,7 @@
         <th>
             @Html.DisplayNameFor(model => model.matkhau)
         </th>
-        <th>
-           @*@Html.DisplayNameFor(model => model.chucvu.tencv)*@
-            Chức Vụ
+        
         <th></th>
     </tr>
 
@@ -76,9 +74,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.matkhau)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.chucvu.tencv)
-            </td>
+            
             <td>
                 @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.manv }, new { @class = "btn btn-primary" }) |
                 @Html.ActionLink("Chi Tiết", "Detail", new { id = item.manv }, new { @class = "btn btn-success" }) |
