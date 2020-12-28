@@ -171,8 +171,8 @@ private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
 					ds.Add(a);
 				}
 			ViewBag.thanhtien = tong;
-return RedirectToAction("Index");
-				//return View(ds);
+
+				return View(ds);
 
         }
 

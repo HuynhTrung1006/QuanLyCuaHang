@@ -7,7 +7,7 @@
 
 <h2>Danh Sách Hóa Đơn</h2>
 <hr />
-@* <div class="row ">
+ <div class="row ">
     <div class="col-md-1"></div>
     <input type="text" id="searchI" placeholder="Hãy điền mã vào đây">
     <div class="col-md-1"></div>
@@ -18,7 +18,7 @@
 <div id="divsearch">
 
 </div>
-<hr/> *@
+<hr/> 
 
 
 
@@ -27,7 +27,7 @@
         $('#search').click(function () {
             var id = $('#searchI').val();
             var url = '/QLCH/Search/' + id;
-            $.get(url, function (data) { $('divsearch').html(data); });
+            $.get(url, function (data) { $('#divsearch').html(data); });
         })
     })
 </script>
