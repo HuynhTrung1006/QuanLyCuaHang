@@ -28,12 +28,20 @@ private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
 		{
 			if (ModelState.IsValid)
 			{
+				DateTime dateht = DateTime.Now;
+				DateTime date = a.hsd.Date;
+				TimeSpan kq = date - dateht;
 				NguyenLieu b = db.NguyenLieux.Find(a.manl);
 				if(b==null)
                 {
-					db.NguyenLieux.Add(a);
-					db.SaveChanges();
-					return RedirectToAction("IndexNL");
+                    if (kq.Days > 0)
+                    {
+						db.NguyenLieux.Add(a);
+						db.SaveChanges();
+						return RedirectToAction("IndexNL");
+					}
+					ModelState.AddModelError("hsd", "Sai Ngay");
+					return View("FormThemNL");
 				}
 				ModelState.AddModelError("manl", "Mã Nguyên Liệu đã được sử dụng");
 			}
