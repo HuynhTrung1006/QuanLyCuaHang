@@ -64,7 +64,7 @@ namespace TestDoAn.Controllers
                 c = a;
                 break;
             }
-            //if (c != null) pmh.ChiTietHoaDons.Remove(c);
+            if (c != null) pmh.ChiTietHoaDons.Remove(c);
             return View("giohang", pmh);
         }
 
