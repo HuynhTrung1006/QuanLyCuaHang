@@ -148,7 +148,7 @@ private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
 
 
 	//QUAN LI HOA DON
-        private Models.QuanLyCuaHangEntites db = new Models.QuanLyCuaHangEntites();
+       
         // GET: Qlch
         public ActionResult Index()
         {
